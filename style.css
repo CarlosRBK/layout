@@ -1,0 +1,151 @@
+@import url(https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&display=swap); /* sirve para importar una fuente de google fonts */
+
+/* cuerpo */
+
+header{
+    display: flex;
+    height: 70px;
+    justify-content: space-between;
+    position: absolute;
+}
+body {
+    font-family: helvetica, arial, sans-serif; /*tipo de letra*/
+    background-color: rgb(255, 255, 255);
+    background-image: url("./images/fondo4.jpg");
+}
+
+h1{
+    display:inline-block; /* para que no ocupe el 100% del ancho, solo lo que ocupa el texto*/
+    position: relative; /* para poder mover las rayas de los costados a la posicion origianl */
+    color: rgb(41, 40, 40);
+    font-family: 'Dancing Script', cursive; /* poner la fuente importada a todos los h1 */
+}
+
+h1::after,h1::before{
+    content:'';
+    position:absolute;
+    width:120px;; /* anchura de la linea*/
+    height:3px; /* anchura */
+    background-color: currentColor; /* es igual al color del elemento */
+    top:0.6em; 
+    transform: scale(0); /* hace que desaparezcan las lineas */
+    transition:all 0.2s ease-in; /* tiempo que tarda en volvera a aparecer la linea */
+}
+
+h1:hover::before, h1:hover::after{
+    transform:scale(1)
+}
+
+h1::before{
+    left: -140px;
+}
+
+h1::after{
+    right: -140px;
+}
+
+#textocentro {
+    text-align: center;
+}
+#subtitulocentro {
+    text-align: center;
+}
+
+
+
+#contacto{
+    padding: 10px; /* margen interno */
+    text-align: center; /* alineacion */ 
+    border-radius: 10px;
+    background-image: url("./images/fondo1.jpg");
+}
+
+/* selector de ID TABLERO IZQ*/
+
+#tablero-izquierdo{
+    width: 25%; 
+    position: absolute; 
+    height: 100%;
+    padding: 10px; /* margen interno */
+    left: 0px;
+    background-color: rgb(207, 215, 231);
+    border-radius: 5%;
+  }
+
+  /* selector de ID TABLERO DER*/
+  #tablero-derecho {
+    width: 25%; /* ancho, se usa porcentaje para que sea relativo con cualquier tamano de pantalla*/
+    position: absolute;
+    height: 100%;
+    padding: 10px;
+    right: 0px;
+    border-radius: 5%;
+  }
+
+  /* selector de clase, se usa un . a continuacion el nombre de la clase. */
+  
+.contenedor {
+    position: relative;
+    height: 6%;
+    
+}
+  
+.contenedor2 {
+    position: relative;
+    height: 18%;
+    left: -10px;
+}
+  
+.reducido {
+    height: 4%;
+    border-radius: 5%;
+}
+  
+.componente {
+    position: absolute;
+    max-width: 100%;
+    max-height: 150%;
+    z-index: 3;
+}
+  
+.producto {
+    position: absolute;
+    max-width: 200%;
+    max-height: 200%;
+    z-index: 2;
+    border-radius: 5%;
+}
+.layout {
+    height: 80%;
+    width: 45%;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 1rem;
+    position: absolute;
+    opacity: 0.5;
+    z-index: 1;
+    margin: auto;
+    left: 0px;
+    right: 0px;
+}
+  
+  .rotulo {
+    width: 45%;
+    height: 5%;
+    background: rgb(207, 215, 231);
+    position: absolute;
+    z-index: 1;
+    margin: auto;
+    left: 0px;
+    right: 0px;
+    border-radius: 1em 1rem 0px 0px;
+    text-align: center;
+    color: #000000;
+    
+}
+  
+  .titulo {
+    position: relative;
+    display: inline;
+    top: 0.5rem;
+    
+}
